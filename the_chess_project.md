@@ -1,6 +1,4 @@
-Of course! Let's refine these instructions to create a detailed, step-by-step tutorial. This will be an excellent guide for a student to build a chess game viewer from the ground up.
-
-### **The "Game of the Century": A Programming Tutorial**
+# **The "Game of the Century": The Final Project**
 
 We are going to build a command-line program to replay the historic 1956 chess match between Donald Byrne and a 13-year-old Bobby Fischer. This game is famous for its brilliance and creativity.
 
@@ -144,7 +142,7 @@ Write a function that takes a list of 8 square dictionaries (like the one above)
 
 Now we'll write the logic to generate the data for the entire board at the start of the game.
 
-#### **Your Task: Create a function that generates the initial board.**
+## **[Task 3]: Create a function that generates the initial board matrix and print it.**
 
 Follow these precise steps to create the board data structure, which will be a list of 8 rows.
 
@@ -277,7 +275,7 @@ game_turns = [
 *   **`"promotion": None`**: This is for a special pawn move. If a pawn reaches the other side of the board, it can be promoted to a Queen, Rook, Bishop, or Knight. In this game, no promotions occurred, so this value is always `None`.
 *   **A Special Case - Castling**: Look at turn 8: `{"moves": [("e8", "g8"), ("h8", "f8")]}`. When the `"moves"` list has two tuples, it signifies **castling**. This is a special move where the King (moving from `e8` to `g8`) and the Rook (moving from `h8` to `f8`) move simultaneously. Your program will need to handle both movements in a single turn.
 
-#### **Your Final Task: Write the interactive game-playing program.**
+## **[Final Task - Bonus]: Write the interactive game-playing program.**
 
 Now, put everything together. Write a program that:
 1.  Creates the initial board using your function.
