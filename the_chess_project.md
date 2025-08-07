@@ -173,6 +173,12 @@ Follow these precise steps to create the board data structure, which will be a l
 10. After the row loop finishes, return the `board`.
 
 ---
+### **Let's Draw the chess board**
+To show the game of the century, we first need to draw a full chess board. We'll represent a board as a matrix as mentioned in the previous section.
+
+## **[Task 4]: Create a function to render a chess board.**
+
+Write a Python function that takes board rows array (board matrix) then return a formatted string of the board. You can use the generate initial matrix to test your function.
 
 ### **Let's Play the Game**
 
