@@ -178,7 +178,7 @@ To show the game of the century, we first need to draw a full chess board. We'll
 
 ## **[Task 4]: Create a function to render a chess board.**
 
-Write a Python function that takes board rows array (board matrix) then return a formatted string of the board. You can use the generate initial matrix to test your function.
+Write a Python function that takes board rows array (board matrix) then return a formatted string of the board. Use the generate initial matrix to test your function.
 
 ### **Let's Play the Game**
 
@@ -281,14 +281,22 @@ game_turns = [
 *   **`"promotion": None`**: This is for a special pawn move. If a pawn reaches the other side of the board, it can be promoted to a Queen, Rook, Bishop, or Knight. In this game, no promotions occurred, so this value is always `None`.
 *   **A Special Case - Castling**: Look at turn 8: `{"moves": [("e8", "g8"), ("h8", "f8")]}`. When the `"moves"` list has two tuples, it signifies **castling**. This is a special move where the King (moving from `e8` to `g8`) and the Rook (moving from `h8` to `f8`) move simultaneously. Your program will need to handle both movements in a single turn.
 
-## **[Final Task - Bonus]: Write the interactive game-playing program.**
 
-Now, put everything together. Write a program that:
+## **[Task 5]: Implement the `"Next"` and `"Quit"` Functionality.**
+
+First, write a program that sets up the board and moves the game forward.
 1.  Creates the initial board using your function.
 2.  Starts a loop that will continue until the user types "quit".
 3.  Inside the loop:
-    *   Clears the screen and prints the current state of the board using your row and square rendering functions.
-    *   Prompts the user for input: "next", "previous", or "quit".
-    *   If the user types "next", apply the next move from the `game_turns` list to your board data. This involves finding the `from_square`, moving its piece data to the `to_square`, and setting the `from_square`'s piece to `None`.
-    *   If the user types "previous", you will need to undo the last move.
-    *   If the user types "quit", the loop should end.
+    * Clears the screen `(Bonus)`. 
+    * Prints the current state of the board using your board rendering function.
+    * Prompts the user for input: "next" or "quit".
+    * If the user types "next", apply the next move from the `game_turns` list to your board data. This involves finding the `from_square`, moving its piece data to the `to_square`, and setting the `from_square`'s piece to `None`.
+    * If the user types "quit", the loop should end.
+
+## **[Final Task - Bonus]: Add the "Previous" Functionality.**
+
+Now, modify your program to allow the user to go backward in the game.
+1.  Update the user prompt to accept "previous" as a valid command.
+2.  Inside the loop:
+    * If the user types "previous", you will need to undo the last move.
